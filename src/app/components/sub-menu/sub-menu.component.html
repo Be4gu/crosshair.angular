@@ -1,0 +1,14 @@
+<ng-container *ngFor="let name of types">
+    <button *ngIf="name !== active; else buttonFondo" (click)="pruebas(name)"
+        class="buttons box-border border border-gray-300 py-1 px-2 text-gray-300 ">
+        {{name}}
+    </button>
+    <ng-template #buttonFondo>
+
+        <button 
+            class="buttons box-border border border-gray-300 py-1 px-2 text-gray-300 bg-gray-200 shadow-polvillo text-[#222]">
+            {{name}}
+        </button>
+    </ng-template>
+
+</ng-container>
