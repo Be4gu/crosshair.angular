@@ -1,14 +1,15 @@
+<input [(ngModel)]="searcher" (keyup)="searcherInput()" placeholder="Search"     type="text"  class="order-2 mr-5 h-[34px] w-72 rounded-md border border-gray-300 bg-inherit pl-2 text-gray-300 placeholder:italic focus:shadow-polvillo focus:outline-none focus:ring-transparent sm:order-none md:w-56" />
 <ng-container *ngFor="let name of types">
-    <button *ngIf="name !== active; else buttonFondo" (click)="pruebas(name)"
-        class="buttons box-border border border-gray-300 py-1 px-2 text-gray-300 ">
+    <button *ngIf="name !== active; else buttonActive" (click)="activeButton(name)"
+        class="box-border border border-gray-300 py-1 px-2 text-gray-300 ">
         {{name}}
     </button>
-    <ng-template #buttonFondo>
+    <ng-template #buttonActive>
 
-        <button 
-            class="buttons box-border border border-gray-300 py-1 px-2 text-gray-300 bg-gray-200 shadow-polvillo text-[#222]">
+        <button
+            class="box-border border border-gray-300 py-1 px-2 text-gray-300 bg-gray-200 shadow-polvillo text-[#222]">
             {{name}}
         </button>
     </ng-template>
-
 </ng-container>
+<p class="text-white">{{searcher}}</p>

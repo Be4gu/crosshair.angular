@@ -7,10 +7,10 @@ import { ButtonClipComponent } from './components/button-clip/button-clip.compon
 import { CardComponent } from './components/card/card.component';
 import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
-import { SearcherComponent } from './components/searcher/searcher.component';
 import { ButtonTypeComponent } from './components/button-type/button-type.component';
 import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { MirasComponent } from './components/miras/miras.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,14 +19,14 @@ import { MirasComponent } from './components/miras/miras.component';
     CardComponent,
     MainComponent,
     HeaderComponent,
-    SearcherComponent,
     ButtonTypeComponent,
     SubMenuComponent,
     MirasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
