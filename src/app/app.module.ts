@@ -11,6 +11,7 @@ import { ButtonTypeComponent } from './components/button-type/button-type.compon
 import { SubMenuComponent } from './components/sub-menu/sub-menu.component';
 import { MirasComponent } from './components/miras/miras.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,14 +22,10 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     ButtonTypeComponent,
     SubMenuComponent,
-    MirasComponent
+    MirasComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
